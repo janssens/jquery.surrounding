@@ -1,5 +1,5 @@
 /*!
- * Jquery Surrounding v1
+ * Jquery Surrounding v1.1
  * a lightweight jquery plugin plugin which takes an ordinary image tag and transforms it into a gorgeous interactive 360° panorama
  * https://github.com/janssens/jquery.surrounding
  * GPL 2 License
@@ -16,8 +16,8 @@
 		}
 		$(this).css({"background":"url("+option.source+")","background-size":"auto 100%","cursor":"pointer"});
 		$(this).mousewheel(function(event, delta) {
-			var p = parseInt($(this).css("background-position-x"));
-			$(this).css("background-position-x", (p + delta * 30)+"px");
+			var p = parseInt($(this).css("background-position").split(" ")[0].replace("px",""));
+					$(this).css("background-position", (p + delta * 30)+"px");
 			event.preventDefault();
 		});
 
@@ -61,8 +61,8 @@
 					delta = startX - e.pageX;
 					startX = e.pageX;
 				}
-				var p = parseInt($(this).css("background-position-x"));
-				$(this).css("background-position-x", (p - delta)+"px");
+				var p = parseInt($(this).css("background-position").split(" ")[0].replace("px",""));
+				$(this).css("background-position", (p - delta)+"px");
 			}
 		});
 		$(this).bind('touchend mouseup mouseleave',function(e){

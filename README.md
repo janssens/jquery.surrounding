@@ -36,8 +36,6 @@ jQuery(document).ready(function(){
 
 ### In CSS
 
-Add a class of `js-masonry` to your element. Options can be set in JSON in `data-masonry-options`.
-
 ``` css
 .my360,.my360empty{
 	width: 50%;
