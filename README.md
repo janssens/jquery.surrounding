@@ -6,7 +6,7 @@ _A lightweight jquery plugin plugin which takes an ordinary image tag and transf
 
 A packaged source file includes everything you need to use jquery.surrounding.
 
-+ [jquery.surrounding.min.js]https://github.com/janssens/jquery.surrounding/blob/master/jquery.surrounding.js)
++ [jquery.surrounding.min.js](https://github.com/janssens/jquery.surrounding/blob/master/jquery.surrounding.js)
 + [jquery.surrounding.js](https://github.com/janssens/jquery.surrounding/blob/master/jquery.surrounding.min.js)
 
 ## Initialize
