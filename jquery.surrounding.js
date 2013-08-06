@@ -17,7 +17,7 @@
 		$(this).css({"background":"url("+option.source+")","background-size":"auto 100%","cursor":"pointer"});
 		$(this).mousewheel(function(event, delta) {
 			var p = parseInt($(this).css("background-position-x"));
-			$(this).css("background-position-x", (p + delta * 90)+"px");
+			$(this).css("background-position-x", (p + delta * 30)+"px");
 			event.preventDefault();
 		});
 
