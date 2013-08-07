@@ -46,7 +46,6 @@ jQuery(document).ready(function(){
 
 + [jquery.surrounding demo page](http://gaetan.janssens.free.fr/plugins/jquery.surrounding/)
 
-
 ## License
 
 Masonry is licensed GPL 2.
