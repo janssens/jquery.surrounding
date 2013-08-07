@@ -23,7 +23,7 @@
 
 		$(this).on("dblclick",function(){
 			if(! that.hasClass("fullscreen")) {
-				that.clone().appendTo("body").addClass("fullscreen").css({"position":"fixed","top":0,"left":0,"margin":0}).animate({"width":"100%","height":"100%"},500,function(){jQuery(this).surround(option);});
+				that.clone().appendTo("body").addClass("fullscreen").css({"position":"fixed","top":0,"left":0,"margin":0,"border":0}).animate({"width":"100%","height":"100%"},500,function(){jQuery(this).surround(option);});
 			}else{
 				that.animate({"opacity":0},500,function(){that.remove();});
 			}
