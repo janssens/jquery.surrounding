@@ -12,18 +12,21 @@
 		var that = $(this);
 		if (!option){
 			option = new Object;
+		}
+		if (!option.source){
 			option.source = myImg.attr("src");
 		}
 		$(this).css({"background":"url("+option.source+")","background-size":"auto 100%","cursor":"pointer"});
 		$(this).mousewheel(function(event, delta) {
 			var p = parseInt($(this).css("background-position").split(" ")[0].replace("px",""));
-					$(this).css("background-position", (p + delta * 30)+"px");
+			$(this).css("background-position", (p + delta * 30)+"px");
 			event.preventDefault();
 		});
 
 		function switchFullscreen(){
 			if(! that.hasClass("surroundingFullscreen")) {
-				that.clone().appendTo("body").addClass("surroundingFullscreen").css({"position":"fixed","top":0,"left":0,"margin":0,"border":0}).animate({"width":"100%","height":"100%"},500,function(){jQuery(this).surround(option);});
+				var offset = that.offset();
+				that.clone().appendTo("body").addClass("surroundingFullscreen").css({"opacity":0,"position":"fixed","width":that.width()+"px","left":offset.left,"margin":0,"top":offset.top-$(document).scrollTop()}).animate({"background-position":0,"width":"100%","height":"100%","top":0,"left":0,"border":0,"opacity":1},500,function(){jQuery(this).surround(option);});
 				window.location.hash = 'surroundingFullscreen';
 			}else{
 				that.animate({"opacity":0},500,function(){that.remove();});
