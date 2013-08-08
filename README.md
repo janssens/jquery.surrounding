@@ -20,7 +20,7 @@ A packaged source file includes everything you need to use jquery.surrounding.
 ``` js
 jQuery(document).ready(function(){
 			jQuery(".my360").surround();
-			jQuery(".my360empty").surround({"source":"../360.jpg"});
+			jQuery(".my360empty").surround({source:"../360.jpg",step:10}); // step is the mousewheel delta multiplier
 });
 ```
 
